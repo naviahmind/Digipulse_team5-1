@@ -14,16 +14,11 @@
         {% for post in posts %}
         <li class="ranked-item">
             <span class="rank-number">{{ forloop.counter }}</span>
-            {% if post.thumbnail %}
-            <a href="{% url 'webtintuc:post_detail' post.slug %}" class="ranked-thumb">
-                <img src="{{ post.thumbnail.url }}" alt="{{ post.title }}">
-            </a>
-            {% endif %}
             <div class="ranked-body">
                 <span class="news-category-tag">{{ post.category.name }}</span>
                 <h3><a href="{% url 'webtintuc:post_detail' post.slug %}">{{ post.title }}</a></h3>
                 <p class="news-meta">
-                    <strong>{{ post.author.get_full_name|default:post.author.username }}</strong> | {{ post.published_at|date:"d/m/Y H:i" }}
+                    {{ post.published_at|date:"d/m/Y H:i" }}
                     <span class="views-badge">👁 {{ post.views_count }} lượt xem</span>
                 </p>
                 <p>{{ post.summary|truncatewords:25 }}</p>
