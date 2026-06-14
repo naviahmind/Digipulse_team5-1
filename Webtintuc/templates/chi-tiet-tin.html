@@ -9,7 +9,7 @@
     <article class="article">
         <h1>{{ post.title }}</h1>
         <p class="article-meta">
-            <strong>{{ post.author.get_full_name|default:post.author.username }}</strong> | {{ post.published_at|date:"d/m/Y" }} | {{ post.views_count }} views
+            {{ post.published_at|date:"d/m/Y" }} | {{ post.views_count }} views
         </p>
 
         {% if post.thumbnail %}
