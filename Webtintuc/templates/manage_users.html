@@ -131,21 +131,6 @@
                                 {% endif %}
                             </form>
 
-                            <!-- Cấp / Gỡ quyền tác giả -->
-                            <form method="POST" action="{% url 'webtintuc:toggle_user_staff' u.id %}" style="display:inline;">
-                                {% csrf_token %}
-                                {% if u.is_staff %}
-                                <button type="submit" class="btn-action btn-demote" title="Gỡ quyền tác giả"
-                                    onclick="return confirm('Gỡ quyền tác giả của {{ u.username }}?')">
-                                    ⬇ Gỡ tác giả
-                                </button>
-                                {% else %}
-                                <button type="submit" class="btn-action btn-promote" title="Cấp quyền tác giả">
-                                    ⬆ Cấp tác giả
-                                </button>
-                                {% endif %}
-                            </form>
-
                             <!-- Đặt lại mật khẩu -->
                             <button type="button" class="btn-action btn-pw"
                                 onclick="openResetPwModal('{{ u.id }}', '{{ u.username }}')"
