@@ -11,7 +11,7 @@
             <h2>Featured News</h2>
             <h1>{{ featured_post.title }}</h1>
             <p class="featured-meta">
-                By {{ featured_post.author.get_full_name|default:featured_post.author.username }} | {{ featured_post.published_at|date:"d/m/Y" }}
+                {{ featured_post.published_at|date:"d/m/Y" }}
             </p>
             <p>{{ featured_post.summary }}</p>
             <a href="{% url 'webtintuc:post_detail' featured_post.slug %}" class="btn">Read More</a>
@@ -33,7 +33,7 @@
                 <div class="card-body">
                 <h3><a href="{% url 'webtintuc:post_detail' post.slug %}">{{ post.title }}</a></h3>
                 <p class="news-meta">
-                    <strong>{{ post.author.get_full_name|default:post.author.username }}</strong> | {{ post.published_at|date:"d/m/Y" }}
+                    {{ post.published_at|date:"d/m/Y" }}
                 </p>
                 <p>{{ post.summary|truncatewords:20 }}</p>
                 <a href="{% url 'webtintuc:post_detail' post.slug %}" class="link">Read More →</a>
