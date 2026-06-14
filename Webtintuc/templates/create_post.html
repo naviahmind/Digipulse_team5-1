@@ -60,7 +60,7 @@
                         <button type="button" onclick="insertLink()" title="Chèn link">🔗</button>
                     </div>
 
-                    <!-- Vùng soạn thảo — contenteditable, hỗ trợ ảnh inline -->
+                    <!-- Vùng soạn thảo — contenteditable, -->
                     <div id="editor" contenteditable="true" class="editor-area">{% if form.content.value %}{{ form.content.value|safe }}{% endif %}</div>
 
                     <!-- Hidden textarea để submit -->
@@ -79,16 +79,6 @@
                             <button type="button" onclick="addCategory()">+ Thêm</button>
                         </div>
                         <div id="categoryMsg" class="quick-add-msg"></div>
-                    </div>
-                    <div class="fg">
-                        <label>Tags</label>
-                        {{ form.tags }}
-                        <div class="quick-add">
-                            <input type="text" id="newTagInput" placeholder="Tên tag mới...">
-                            <button type="button" onclick="addTag()">+ Thêm</button>
-                        </div>
-                        <div id="tagMsg" class="quick-add-msg"></div>
-                        <small style="color:#999;font-size:12px;">Giữ Ctrl (hoặc Cmd) để chọn nhiều tag</small>
                     </div>
                     <div class="fg">
                         <label>Loại bài</label>{{ form.post_type }}

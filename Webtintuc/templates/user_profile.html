@@ -17,8 +17,6 @@
       <p class="profile-username">@{{ profile_user.username }}
         {% if profile_user.is_superuser %}
         <span class="role-badge role-admin">Quản trị viên</span>
-        {% elif profile_user.is_staff %}
-        <span class="role-badge role-author">Tác giả</span>
         {% else %}
         <span class="role-badge role-member">Thành viên</span>
         {% endif %}
