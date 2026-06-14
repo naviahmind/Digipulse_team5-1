@@ -363,7 +363,7 @@ def delete_post(request, slug):
     if request.method == 'POST':
         post.delete()
         return redirect('webtintuc:my_posts')
-    return render(request, 'confirm_delete_post.html', {**get_base_context(request), 'post': post})
+    return redirect('webtintuc:my_posts')
 
 
 @login_required(login_url='webtintuc:login')
