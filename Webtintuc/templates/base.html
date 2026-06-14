@@ -53,10 +53,10 @@
                         <span class="role-badge role-member" title="Tài khoản người dùng">Thành viên</span>
                         {% endif %}
                         {% if user.is_staff %}
-                        <a href="{% url 'webtintuc:my_posts' %}" title="Quản lý bài viết">🛠️ Quản lý bài viết</a>
+                        <a href="{% url 'webtintuc:my_posts' %}" title="Quản lý bài viết">Quản lý bài viết</a>
                         {% endif %}
                         {% if user.is_superuser %}
-                        <a href="{% url 'webtintuc:manage_users' %}" title="Quản lý người dùng">👥 Quản lý người dùng</a>
+                        <a href="{% url 'webtintuc:manage_users' %}" title="Quản lý người dùng">Quản lý người dùng</a>
                         {% endif %}
                         <a href="{% url 'webtintuc:logout' %}">Đăng xuất</a>
                     {% else %}
